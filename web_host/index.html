@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Accessibility meta -->
+  <meta name="color-scheme" content="light dark">
+</head>
+<body>
+  <!--
+    This shell provides fallback content and mounts the Flutter web app (which will output files
+    into flutter-app/build/web when you run `flutter build web`).
+  -->
+  <main id="app-shell">
+    <h1>Expense Tracker</h1>
+    <p class="lead">A responsive, accessible expense tracker. If the interactive app does not load, use the fallback form below.</p>
+
+    <!-- A small accessible fallback form (works without JS) -->
+    <noscript>
+      <section aria-label="Fallback expense input">
+        <form action="#" method="post">
+          <label>Category: <input name="category"></label>
+          <label>Amount: <input name="amount" type="number" step="0.01"></label>
+          <label>Date: <input name="date" type="date"></label>
+          <label>Note: <input name="note"></label>
+          <button type="submit">Save (fallback)</button>
+        </form>
+      </section>
+    </noscript>
+
+    <!-- Flutter web build will be placed into flutter-app/build/web and referenced here after building -->
+    <!-- When you run `flutter build web`, copy the contents of flutter-app/build/web into this directory or point your server to it. -->
+    <div id="flutter-app-root">
+      <!-- The compiled Flutter app's index.html will normally replace this in a deployment. -->
+      <p>Loading interactive app...</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>Accessible expense tracker — keyboard navigable, screenreader friendly.</p>
+  </footer>
+</body>
+</html>
